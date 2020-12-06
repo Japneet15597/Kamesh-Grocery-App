@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script src="myScript.js"></script>
+</head>
+
+<body style="display: flex; justify-content: center;">
+    <div style="display: flex; justify-content: center; flex-direction: column; min-width: fit-content;">
+
+        <form onsubmit="formSubmit(event)">
+            <input required style="padding: 10px; border-radius: 15px;" id="nameField" placeholder="User Name" />
+            <button id="loginButton" onclick="submitForm(document.getElementById('nameField').value)"
+                style="border-radius: 10px; padding: 5px; background-color: aliceblue; margin-top: 2%;">Log in</button>
+            <button id="logOutButton" onclick="logOut()"
+                style="display: none; border-radius: 10px; padding: 5px; background-color: aliceblue; margin-top: 2%;">Log
+                out</button>
+        </form>
+
+        <div id="listArea" style="display: none; border-radius: 10px; border: 1px solid grey; min-width: fit-content;">
+
+            <input placeholder="Grocery Item" id="item" style="border-radius: 10px; border: 0px; padding: 10px;" />
+            <button onclick="addItem(document.getElementById('item').value)">Add</button>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
